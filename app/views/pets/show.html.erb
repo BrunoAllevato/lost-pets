@@ -1,0 +1,9 @@
+<h1><%= @pet.description %></h1>
+<h2><%= @pet.species %></h2>
+<h3><%= @pet.address %></h3>
+<h4><%= @pet.found_at %></h4>
+
+<%= link_to pets_path, class: 'btn btn-primary mt-5 mb-3' do %>
+  <i class="fa-solid fa-paw"></i>
+  Back to Homepage
+<% end %>

@@ -1,0 +1,14 @@
+<div class="col">
+  <div class="card">
+    <%= link_to pet_path(pet), class: 'text-decoration-none' do %>
+      <img src="https://source.unsplash.com/random/150x200/?<%= pet.species %>" class="card-img-top" height='250px'>
+      <div class="card-body">
+        <h5 class="card-title"><%= pet.description %></h5>
+    <% end %>
+        <p class="card-text">Lost <%= pet.species %> currently based in <%= pet.address %>. It was found at <%= pet.found_at %>.</p>
+      </div>
+      <div class="card-footer text-center">
+        <%= link_to 'Found?', pet_path(pet), class: 'btn btn-warning', data: { turbo_method: :delete, turbo_confirm: 'Are you sure you have found the pet? (if "yes" than click "ok")' } %>
+      </div>
+  </div>
+</div>
